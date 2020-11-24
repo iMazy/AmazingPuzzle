@@ -1,24 +1,113 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17156" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17125"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Puzzle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="428-5G-Owf">
+                                <rect key="frame" x="20" y="223" width="374" height="460"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="460" id="uvt-AL-bJZ"/>
+                                </constraints>
+                            </view>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Gs-dXX">
+                                <rect key="frame" x="20" y="723" width="374" height="60"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="tCV-MH-53a"/>
+                                </constraints>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="367-Kc-xl3">
+                                    <size key="itemSize" width="47" height="62"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTPuzzleThumbViewCell" id="td9-bP-jgW" customClass="PTPuzzleThumbViewCell" customModule="iOS_Puzzle" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4o5-nj-qbf">
+                                            <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makecards_puzzle_storyboard6_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="HG0-aJ-26a">
+                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                                </imageView>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="top" secondItem="4o5-nj-qbf" secondAttribute="top" id="S6E-bY-PZL"/>
+                                                <constraint firstAttribute="trailing" secondItem="HG0-aJ-26a" secondAttribute="trailing" id="wOf-9N-aUd"/>
+                                                <constraint firstAttribute="bottom" secondItem="HG0-aJ-26a" secondAttribute="bottom" id="wWh-mb-Ypf"/>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="leading" secondItem="4o5-nj-qbf" secondAttribute="leading" id="yrd-Y9-av7"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="47" height="62"/>
+                                        <connections>
+                                            <outlet property="thumbImageView" destination="HG0-aJ-26a" id="gEc-Gt-Wjv"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gUW-nN-hF6"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Br0-gj-wHB"/>
+                                </connections>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-6S-5IK">
+                                <rect key="frame" x="163" y="84" width="88" height="99"/>
+                                <state key="normal" image="icon_PhotoEffect"/>
+                                <connections>
+                                    <action selector="selectPhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVz-Kq-Tv8"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="428-5G-Owf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JLK-rN-ogr"/>
+                            <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="K4z-vp-aLI"/>
+                            <constraint firstItem="428-5G-Owf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NU3-Te-vF5"/>
+                            <constraint firstItem="J88-Gs-dXX" firstAttribute="top" secondItem="428-5G-Owf" secondAttribute="bottom" constant="40" id="RCQ-VX-5Zl"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J88-Gs-dXX" secondAttribute="trailing" constant="20" id="Xqx-Qg-NWt"/>
+                            <constraint firstItem="J88-Gs-dXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aTq-bz-bRC"/>
+                            <constraint firstItem="428-5G-Owf" firstAttribute="top" secondItem="tEi-6S-5IK" secondAttribute="bottom" constant="40" id="dAI-Cr-IZk"/>
+                            <constraint firstItem="428-5G-Owf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="geR-BY-QE2"/>
+                            <constraint firstItem="tEi-6S-5IK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjO-Zh-9ZQ"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="collectionView" destination="J88-Gs-dXX" id="r82-cc-UhL"/>
+                        <outlet property="contentView" destination="428-5G-Owf" id="abC-AG-r9h"/>
+                        <outlet property="flowLayout" destination="367-Kc-xl3" id="TSl-Fd-Yy4"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="140.57971014492756" y="65.625"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="icon_PhotoEffect" width="88" height="88"/>
+        <image name="makecards_puzzle_storyboard6_icon.png" width="31" height="39"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGroupedBackgroundColor">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
 </document>
