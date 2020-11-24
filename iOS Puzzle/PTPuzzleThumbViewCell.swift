@@ -9,14 +9,26 @@ import UIKit
 
 class PTPuzzleThumbViewCell: UICollectionViewCell {
     
-    @IBOutlet weak var thumbImageView: UIImageView!
+    public lazy var thumbImageView: UIImageView = UIImageView()
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
+        setupUI()
+    }
+    
+    func setupUI() {
+        thumbImageView.frame = self.bounds.insetBy(dx: 2, dy: 2)
+        contentView.addSubview(thumbImageView)
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        thumbImageView.frame = self.bounds.insetBy(dx: 2, dy: 2)
     }
     
     override var isSelected: Bool {
@@ -24,5 +36,4 @@ class PTPuzzleThumbViewCell: UICollectionViewCell {
             contentView.backgroundColor = isSelected ? UIColor.red : UIColor.white
         }
     }
-   
 }

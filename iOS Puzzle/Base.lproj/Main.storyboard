@@ -58,15 +58,8 @@
                                             </constraints>
                                         </collectionViewCellContentView>
                                         <size key="customSize" width="56" height="77"/>
-                                        <connections>
-                                            <outlet property="thumbImageView" destination="HG0-aJ-26a" id="gEc-Gt-Wjv"/>
-                                        </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <connections>
-                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="gUW-nN-hF6"/>
-                                    <outlet property="delegate" destination="BYZ-38-t0r" id="Br0-gj-wHB"/>
-                                </connections>
                             </collectionView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-6S-5IK">
                                 <rect key="frame" x="163" y="84" width="88" height="99"/>
@@ -115,9 +108,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="collectionView" destination="J88-Gs-dXX" id="r82-cc-UhL"/>
                         <outlet property="contentView" destination="428-5G-Owf" id="abC-AG-r9h"/>
-                        <outlet property="flowLayout" destination="367-Kc-xl3" id="TSl-Fd-Yy4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
