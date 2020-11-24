@@ -20,43 +20,44 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="428-5G-Owf">
                                 <rect key="frame" x="20" y="223" width="374" height="460"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="460" id="uvt-AL-bJZ"/>
                                 </constraints>
                             </view>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="J88-Gs-dXX">
-                                <rect key="frame" x="20" y="723" width="374" height="60"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <rect key="frame" x="20" y="723" width="374" height="80"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="tCV-MH-53a"/>
+                                    <constraint firstAttribute="height" constant="80" id="tCV-MH-53a"/>
                                 </constraints>
-                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="367-Kc-xl3">
-                                    <size key="itemSize" width="47" height="62"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="367-Kc-xl3">
+                                    <size key="itemSize" width="56" height="77"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PTPuzzleThumbViewCell" id="td9-bP-jgW" customClass="PTPuzzleThumbViewCell" customModule="iOS_Puzzle" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="56" height="77"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4o5-nj-qbf">
-                                            <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="56" height="77"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makecards_puzzle_storyboard6_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="HG0-aJ-26a">
-                                                    <rect key="frame" x="0.0" y="0.0" width="47" height="62"/>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="makecards_puzzle_storyboard6_icon.png" translatesAutoresizingMaskIntoConstraints="NO" id="HG0-aJ-26a">
+                                                    <rect key="frame" x="2" y="2" width="52" height="73"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                 </imageView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="top" secondItem="4o5-nj-qbf" secondAttribute="top" id="S6E-bY-PZL"/>
-                                                <constraint firstAttribute="trailing" secondItem="HG0-aJ-26a" secondAttribute="trailing" id="wOf-9N-aUd"/>
-                                                <constraint firstAttribute="bottom" secondItem="HG0-aJ-26a" secondAttribute="bottom" id="wWh-mb-Ypf"/>
-                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="leading" secondItem="4o5-nj-qbf" secondAttribute="leading" id="yrd-Y9-av7"/>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="top" secondItem="4o5-nj-qbf" secondAttribute="top" constant="2" id="4Nl-BG-ec8"/>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="centerX" secondItem="4o5-nj-qbf" secondAttribute="centerX" id="4xB-Km-ocH"/>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="centerY" secondItem="4o5-nj-qbf" secondAttribute="centerY" id="GGC-DY-5i7"/>
+                                                <constraint firstItem="HG0-aJ-26a" firstAttribute="leading" secondItem="4o5-nj-qbf" secondAttribute="leading" constant="2" id="Uxg-MA-zaH"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="47" height="62"/>
+                                        <size key="customSize" width="56" height="77"/>
                                         <connections>
                                             <outlet property="thumbImageView" destination="HG0-aJ-26a" id="gEc-Gt-Wjv"/>
                                         </connections>
@@ -74,6 +75,28 @@
                                     <action selector="selectPhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVz-Kq-Tv8"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-P8-Idd">
+                                <rect key="frame" x="304" y="118" width="77" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="删除1张"/>
+                                <connections>
+                                    <action selector="deleteLastImageSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyD-mh-f0g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-D8-R82">
+                                <rect key="frame" x="64" y="117" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="清空"/>
+                                <connections>
+                                    <action selector="deleteAllImageSources:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L93-8R-f7u"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击添加图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j3-hl-AQe">
+                                <rect key="frame" x="155" y="55" width="104" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
@@ -82,9 +105,11 @@
                             <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="K4z-vp-aLI"/>
                             <constraint firstItem="428-5G-Owf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NU3-Te-vF5"/>
                             <constraint firstItem="J88-Gs-dXX" firstAttribute="top" secondItem="428-5G-Owf" secondAttribute="bottom" constant="40" id="RCQ-VX-5Zl"/>
+                            <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6j3-hl-AQe" secondAttribute="bottom" constant="8" id="V4f-xj-Drd"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="J88-Gs-dXX" secondAttribute="trailing" constant="20" id="Xqx-Qg-NWt"/>
                             <constraint firstItem="J88-Gs-dXX" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="aTq-bz-bRC"/>
                             <constraint firstItem="428-5G-Owf" firstAttribute="top" secondItem="tEi-6S-5IK" secondAttribute="bottom" constant="40" id="dAI-Cr-IZk"/>
+                            <constraint firstItem="6j3-hl-AQe" firstAttribute="centerX" secondItem="tEi-6S-5IK" secondAttribute="centerX" id="eEX-vT-aVn"/>
                             <constraint firstItem="428-5G-Owf" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="geR-BY-QE2"/>
                             <constraint firstItem="tEi-6S-5IK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjO-Zh-9ZQ"/>
                         </constraints>
@@ -103,9 +128,6 @@
     <resources>
         <image name="icon_PhotoEffect" width="88" height="88"/>
         <image name="makecards_puzzle_storyboard6_icon.png" width="31" height="39"/>
-        <systemColor name="systemBackgroundColor">
-            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-        </systemColor>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

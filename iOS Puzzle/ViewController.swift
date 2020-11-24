@@ -8,11 +8,12 @@
 import UIKit
 
 enum PTPicCountFlag: Int {
-    case one = 1
-    case two = 2
-    case three = 3
-    case four =  4
-    case five = 5
+    
+    case one     = 1
+    case two     = 2
+    case three   = 3
+    case four    = 4
+    case five    = 5
     case defalut = 0
     
     var flagString: String {
@@ -40,17 +41,17 @@ class ViewController: UIViewController {
     
     private var imageSource: [UIImage] = []
     private var currentFlag: PTPicCountFlag = .defalut
+    private var styleIndexs: Int = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        flowLayout.itemSize = CGSize(width: 68, height: 60)
-        flowLayout.minimumLineSpacing = 10
-        flowLayout.minimumInteritemSpacing = 10
+        flowLayout.itemSize = CGSize(width: (UIScreen.main.bounds.width - 20 * 3 - 5 * 5) / 6, height: 70)
+        flowLayout.minimumLineSpacing = 5
+        flowLayout.minimumInteritemSpacing = 5
         flowLayout.scrollDirection = .horizontal
         collectionView.contentInset = UIEdgeInsets(top: 0, left: 10, bottom: 0, right: 10)
         
-//        collectionView.register(PTPuzzleThumbViewCell.self, forCellWithReuseIdentifier: "PTPuzzleThumbViewCell")
         // Do any additional setup after loading the view.
         view.backgroundColor = .green
 
@@ -63,9 +64,43 @@ class ViewController: UIViewController {
         self.present(imagePicker, animated: true, completion: nil)
     }
     
+    @IBAction func deleteLastImageSource(_ sender: Any) {
+        self.imageSource.removeLast()
+        if imageSource.count >= 1 && imageSource.count <= 5 {
+            styleIndexs = imageSource.count > 1 ? 6 : 0
+            currentFlag = PTPicCountFlag(rawValue: imageSource.count) ?? .defalut
+            updatePuzzleWithCountTag(currentFlag.flagString, styleIndex: "\(1)")
+            self.collectionView.reloadData()
+            self.collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .init(rawValue: 0))
+        }
+    }
+    
+    @IBAction func deleteAllImageSources(_ sender: Any) {
+        self.imageSource.removeAll()
+        self.contentView.subviews.forEach({ $0.removeFromSuperview() })
+        styleIndexs = 0
+        self.collectionView.reloadData()
+    }
+    
     func updatePuzzleWithCountTag(_ tag: String, styleIndex: String) {
         
         self.contentView.subviews.forEach({ $0.removeFromSuperview() })
+        
+        if tag.count <= 0 {
+            
+            let editView = PTPuzzleImageEditView(frame: self.contentView.bounds)
+            let bezierPath: UIBezierPath = UIBezierPath(rect: self.contentView.bounds)
+                //UIBezierPath(roundedRect: self.contentView.bounds, cornerRadius: self.contentView.bounds.width / 2)
+            editView.clipsToBounds = true
+            editView.tapDelegate = self
+            editView.realCellArea = bezierPath
+            if let image = self.imageSource.first {
+                editView.setImageViewData(image)
+            }
+            
+            contentView.addSubview(editView)
+            return
+        }
         
         let picCountFlag = tag// "four"
         let styleIndex = styleIndex //"2"
@@ -230,7 +265,7 @@ extension ViewController: PTPuzzleImageEditViewDelegate {
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 6
+        return styleIndexs
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -242,6 +277,9 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         print(indexPath.row)
+        if self.imageSource.count <= 0 {
+            return
+        }
         updatePuzzleWithCountTag(self.currentFlag.flagString, styleIndex: "\(indexPath.row + 1)")
     }
 }
@@ -249,7 +287,7 @@ extension ViewController: UICollectionViewDataSource, UICollectionViewDelegate {
 extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
-        
+        picker.dismiss(animated: true, completion: nil)
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
@@ -257,9 +295,11 @@ extension ViewController: UIImagePickerControllerDelegate & UINavigationControll
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageSource.append(image)
             if imageSource.count >= 1 && imageSource.count <= 5 {
+                styleIndexs = imageSource.count > 1 ? 6 : 0
                 currentFlag = PTPicCountFlag(rawValue: imageSource.count) ?? .defalut
                 updatePuzzleWithCountTag(currentFlag.flagString, styleIndex: "\(1)")
                 self.collectionView.reloadData()
+                self.collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .init(rawValue: 0))
             }
         }
         picker.dismiss(animated: true, completion: nil)

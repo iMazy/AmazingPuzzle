@@ -19,5 +19,10 @@ class PTPuzzleThumbViewCell: UICollectionViewCell {
         super.init(coder: coder)
     }
     
+    override var isSelected: Bool {
+        didSet {
+            contentView.backgroundColor = isSelected ? UIColor.red : UIColor.white
+        }
+    }
    
 }

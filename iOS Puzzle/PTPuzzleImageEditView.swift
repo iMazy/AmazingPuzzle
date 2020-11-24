@@ -11,7 +11,7 @@ protocol PTPuzzleImageEditViewDelegate {
     func tapWithEditView(_ sender: PTPuzzleImageEditView)
 }
 
-class PTPuzzleImageEditView: UIScrollView {
+class PTPuzzleImageEditView: UIView {
 
     var realCellArea: UIBezierPath?
     private var mainContentView: UIScrollView!
@@ -24,7 +24,7 @@ class PTPuzzleImageEditView: UIScrollView {
     }
     
     func initImageView() {
-        self.backgroundColor = .lightGray
+//        self.backgroundColor = .white
         self.mainContentView = UIScrollView(frame: self.bounds)
         self.mainContentView.delegate = self
         self.mainContentView.showsVerticalScrollIndicator = false
@@ -32,7 +32,7 @@ class PTPuzzleImageEditView: UIScrollView {
         self.addSubview(self.mainContentView)
         
         self.imageview.frame = CGRect(x: 0, y: 0, width: UIScreen.main.bounds.width * 2.5, height: UIScreen.main.bounds.width * 2.5)
-        self.imageview.backgroundColor = .red
+        self.imageview.backgroundColor = .lightGray
         self.imageview.isUserInteractionEnabled = true
         self.mainContentView.addSubview(self.imageview)
         
@@ -45,8 +45,8 @@ class PTPuzzleImageEditView: UIScrollView {
         self.mainContentView.minimumZoomScale = minimumScale
         self.mainContentView.zoomScale = minimumScale
         
-        self.showsHorizontalScrollIndicator = false
-        self.showsVerticalScrollIndicator = false
+//        self.showsHorizontalScrollIndicator = false
+//        self.showsVerticalScrollIndicator = false
         self.clipsToBounds = true
         
     }
@@ -126,7 +126,6 @@ class PTPuzzleImageEditView: UIScrollView {
         let lockQueue = DispatchQueue(label: "com.test.LockQueue")
         lockQueue.sync {
             self.imageview.frame = rect
-            self.imageview.backgroundColor = .red
             let maskLayer = CAShapeLayer()
             maskLayer.path = self.realCellArea?.cgPath
             maskLayer.fillColor = UIColor.white.cgColor
