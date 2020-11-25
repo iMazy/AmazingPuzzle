@@ -10,24 +10,19 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBOutlet weak var contentView: UIView!
-        
-    private lazy var puzzleContentView = PTPuzzleContentView(frame: contentView.bounds)
-    private lazy var puzzleStyleView = PTPuzzleStyleSelectView()
     
+    // 拼图和分割选择
+    private lazy var puzzleAndStyleView = PTPuzzleAndStyleView()
+    // 图片资源数组
     private var imageSource: [UIImage] = []
-    private var currentFlag: PTPicCountFlag = .defalut
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         view.backgroundColor = .green
         
-        self.puzzleContentView.frame = self.contentView.bounds
-        contentView.addSubview(self.puzzleContentView)
-        
-        puzzleStyleView.delegate = self
-        puzzleStyleView.frame = CGRect(x: 20, y: self.contentView.frame.maxY + 30, width: 300, height: 60)
-        view.addSubview(puzzleStyleView)
+        puzzleAndStyleView.frame = contentView.bounds
+        contentView.addSubview(puzzleAndStyleView)
     }
     
     @IBAction func selectPhotoAction(_ sender: UIButton) {
@@ -40,20 +35,15 @@ class ViewController: UIViewController {
         if self.imageSource.count > 0 {        
             self.imageSource.removeLast()
         }
-//        if imageSource.count >= 1 && imageSource.count <= 5 {
-            currentFlag = PTPicCountFlag(rawValue: imageSource.count) ?? .defalut
-            self.puzzleStyleView.currentImageCount = self.imageSource.count
-            self.puzzleContentView.updatePuzzleWithStyleIndex(1, images: self.imageSource)
-//        }
+
+        puzzleAndStyleView.imageSource = self.imageSource
+
     }
     
     @IBAction func deleteAllImageSources(_ sender: Any) {
         self.imageSource.removeAll()
-
-        self.puzzleStyleView.currentImageCount = self.imageSource.count
-        self.puzzleContentView.updatePuzzleWithStyleIndex(1, images: self.imageSource)
+        self.puzzleAndStyleView.imageSource = self.imageSource
     }
-
 }
 
 extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
@@ -65,15 +55,8 @@ extension ViewController: UIImagePickerControllerDelegate & UINavigationControll
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         if let image = info[UIImagePickerController.InfoKey.originalImage] as? UIImage {
             imageSource.append(image)
-            self.puzzleStyleView.currentImageCount = self.imageSource.count
-            self.puzzleContentView.updatePuzzleWithStyleIndex(1, images: self.imageSource)
+            puzzleAndStyleView.imageSource = self.imageSource
         }
         picker.dismiss(animated: true, completion: nil)
-    }
-}
-
-extension ViewController: PTPuzzleStyleSelectViewDelegate {
-    func puzzleStyleSelectViewDidSelect(_ index: Int) {
-        self.puzzleContentView.updatePuzzleWithStyleIndex(index + 1, images: self.imageSource)
     }
 }

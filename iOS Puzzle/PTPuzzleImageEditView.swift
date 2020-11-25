@@ -24,7 +24,7 @@ class PTPuzzleImageEditView: UIView {
     }
     
     func initImageView() {
-//        self.backgroundColor = .white
+        
         self.mainContentView = UIScrollView(frame: self.bounds)
         self.mainContentView.delegate = self
         self.mainContentView.showsVerticalScrollIndicator = false

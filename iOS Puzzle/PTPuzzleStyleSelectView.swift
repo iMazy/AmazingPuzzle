@@ -53,7 +53,7 @@ class PTPuzzleStyleSelectView: UIView {
     
     private func setupUI() {
         self.collectionView.register(PTPuzzleThumbViewCell.self, forCellWithReuseIdentifier: "PTPuzzleThumbViewCell")
-        self.collectionView.backgroundColor = UIColor.green
+        self.collectionView.backgroundColor = UIColor.clear
         self.addSubview(self.collectionView)
         self.collectionView.reloadData()
         self.collectionView.selectItem(at: IndexPath(row: 0, section: 0), animated: true, scrollPosition: .init(rawValue: 0))

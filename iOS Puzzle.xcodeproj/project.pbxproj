@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		644A44E9256E904E009199D9 /* PTPuzzleAndStyleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */; };
 		649B3C95256BA1A3000D7702 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B3C94256BA1A3000D7702 /* AppDelegate.swift */; };
 		649B3C99256BA1A3000D7702 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 649B3C98256BA1A3000D7702 /* ViewController.swift */; };
 		649B3C9C256BA1A3000D7702 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 649B3C9A256BA1A3000D7702 /* Main.storyboard */; };
@@ -91,6 +92,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTPuzzleAndStyleView.swift; sourceTree = "<group>"; };
 		649B3C91256BA1A3000D7702 /* iOS Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		649B3C94256BA1A3000D7702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649B3C98256BA1A3000D7702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -212,6 +214,7 @@
 				64D02DBE256CF9D30008C13C /* PTPuzzleThumbViewCell.swift */,
 				64B80174256D35CE003CA531 /* PTPuzzleStyleSelectView.swift */,
 				649B3CAC256BA323000D7702 /* PTPuzzleImageEditView.swift */,
+				644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */,
 				649B3C9A256BA1A3000D7702 /* Main.storyboard */,
 				64D02D58256CF81B0008C13C /* storyboard */,
 				649B3CB0256BBEC3000D7702 /* Plists */,
@@ -486,6 +489,7 @@
 				64B80171256D2DA4003CA531 /* PTPuzzleContentView.swift in Sources */,
 				649B3C99256BA1A3000D7702 /* ViewController.swift in Sources */,
 				649B3CAD256BA323000D7702 /* PTPuzzleImageEditView.swift in Sources */,
+				644A44E9256E904E009199D9 /* PTPuzzleAndStyleView.swift in Sources */,
 				649B3C95256BA1A3000D7702 /* AppDelegate.swift in Sources */,
 				64B80175256D35CE003CA531 /* PTPuzzleStyleSelectView.swift in Sources */,
 				64D02DBF256CF9D30008C13C /* PTPuzzleThumbViewCell.swift in Sources */,
