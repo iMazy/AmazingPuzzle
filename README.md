@@ -1,4 +1,4 @@
-<img src="https://github.com/iMazy/AmazingPuzzle/blob/main/puzzle.png" width=100%>
+<img src="https://github.com/iMazy/AmazingPuzzle/blob/main/iOS%20Puzzle/amazing_cat_puzzle.png" width=100%>
 
 [![License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat)](http://mit-license.org)
 [![Platform](http://img.shields.io/badge/platform-iOS-lightgrey.svg?style=flat)](https://developer.apple.com/resources/)
