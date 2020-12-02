@@ -15,7 +15,7 @@
 # CocoaPods
 
 ```
-  pod AmazingPuzzle
+  pod 'AmazingPuzzle'
 ```
 
 # Requirements
