@@ -205,6 +205,7 @@
 		649B3C88256BA1A3000D7702 = {
 			isa = PBXGroup;
 			children = (
+				640383C8256FD6F900EA9F09 /* Sources */,
 				649B3C93256BA1A3000D7702 /* iOS Puzzle */,
 				649B3C92256BA1A3000D7702 /* Products */,
 			);
@@ -223,7 +224,6 @@
 			children = (
 				649B3C94256BA1A3000D7702 /* AppDelegate.swift */,
 				649B3C98256BA1A3000D7702 /* ViewController.swift */,
-				640383C8256FD6F900EA9F09 /* Sources */,
 				649B3C9A256BA1A3000D7702 /* Main.storyboard */,
 				64D02D58256CF81B0008C13C /* storyboard */,
 				649B3C9D256BA1A5000D7702 /* Assets.xcassets */,
