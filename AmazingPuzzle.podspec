@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = '9.0'
   s.swift_version = '5.0'
   s.source       = { :git => "https://github.com/iMazy/AmazingPuzzle.git", :tag => s.version }
-  s.source_files = 'Sources/xx/*.{swift}'
+  s.source_files = 'Sources/*.{swift}','Sources/Plists/*.{plist}'
   s.screenshots  = ["https://github.com/iMazy/AmazingPuzzle/blob/main/iOS%20Puzzle/amazing_cat_puzzle.png"]
   s.requires_arc = true
 end
