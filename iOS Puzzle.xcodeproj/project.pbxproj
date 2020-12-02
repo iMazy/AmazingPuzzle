@@ -189,6 +189,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		640383C8256FD6F900EA9F09 /* Puzzle */ = {
+			isa = PBXGroup;
+			children = (
+				64B80170256D2DA4003CA531 /* PTPuzzleContentView.swift */,
+				64D02DBE256CF9D30008C13C /* PTPuzzleThumbViewCell.swift */,
+				64B80174256D35CE003CA531 /* PTPuzzleStyleSelectView.swift */,
+				649B3CAC256BA323000D7702 /* PTPuzzleImageEditView.swift */,
+				644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */,
+			);
+			path = Puzzle;
+			sourceTree = "<group>";
+		};
 		649B3C88256BA1A3000D7702 = {
 			isa = PBXGroup;
 			children = (
@@ -210,11 +222,7 @@
 			children = (
 				649B3C94256BA1A3000D7702 /* AppDelegate.swift */,
 				649B3C98256BA1A3000D7702 /* ViewController.swift */,
-				64B80170256D2DA4003CA531 /* PTPuzzleContentView.swift */,
-				64D02DBE256CF9D30008C13C /* PTPuzzleThumbViewCell.swift */,
-				64B80174256D35CE003CA531 /* PTPuzzleStyleSelectView.swift */,
-				649B3CAC256BA323000D7702 /* PTPuzzleImageEditView.swift */,
-				644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */,
+				640383C8256FD6F900EA9F09 /* Puzzle */,
 				649B3C9A256BA1A3000D7702 /* Main.storyboard */,
 				64D02D58256CF81B0008C13C /* storyboard */,
 				649B3CB0256BBEC3000D7702 /* Plists */,

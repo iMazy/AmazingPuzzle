@@ -19,7 +19,10 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        view.backgroundColor = .green
+        let titleImageView = UIImageView(image: UIImage(named: "AmazingPuzzle"))
+        navigationItem.titleView = titleImageView
+        
+        view.backgroundColor = .white
         
         puzzleAndStyleView.frame = contentView.bounds
         contentView.addSubview(puzzleAndStyleView)
