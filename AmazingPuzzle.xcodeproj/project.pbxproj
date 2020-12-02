@@ -93,7 +93,7 @@
 
 /* Begin PBXFileReference section */
 		644A44E8256E904E009199D9 /* PTPuzzleAndStyleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTPuzzleAndStyleView.swift; sourceTree = "<group>"; };
-		649B3C91256BA1A3000D7702 /* iOS Puzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "iOS Puzzle.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		649B3C91256BA1A3000D7702 /* AmazingPuzzle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AmazingPuzzle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		649B3C94256BA1A3000D7702 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		649B3C98256BA1A3000D7702 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		649B3C9B256BA1A3000D7702 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -213,7 +213,7 @@
 		649B3C92256BA1A3000D7702 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				649B3C91256BA1A3000D7702 /* iOS Puzzle.app */,
+				649B3C91256BA1A3000D7702 /* AmazingPuzzle.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -354,9 +354,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		649B3C90256BA1A3000D7702 /* iOS Puzzle */ = {
+		649B3C90256BA1A3000D7702 /* AmazingPuzzle */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 649B3CA5256BA1A5000D7702 /* Build configuration list for PBXNativeTarget "iOS Puzzle" */;
+			buildConfigurationList = 649B3CA5256BA1A5000D7702 /* Build configuration list for PBXNativeTarget "AmazingPuzzle" */;
 			buildPhases = (
 				649B3C8D256BA1A3000D7702 /* Sources */,
 				649B3C8E256BA1A3000D7702 /* Frameworks */,
@@ -366,9 +366,9 @@
 			);
 			dependencies = (
 			);
-			name = "iOS Puzzle";
+			name = AmazingPuzzle;
 			productName = "iOS Puzzle";
-			productReference = 649B3C91256BA1A3000D7702 /* iOS Puzzle.app */;
+			productReference = 649B3C91256BA1A3000D7702 /* AmazingPuzzle.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -386,7 +386,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 649B3C8C256BA1A3000D7702 /* Build configuration list for PBXProject "iOS Puzzle" */;
+			buildConfigurationList = 649B3C8C256BA1A3000D7702 /* Build configuration list for PBXProject "AmazingPuzzle" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -399,7 +399,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				649B3C90256BA1A3000D7702 /* iOS Puzzle */,
+				649B3C90256BA1A3000D7702 /* AmazingPuzzle */,
 			);
 		};
 /* End PBXProject section */
@@ -648,12 +648,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
 				INFOPLIST_FILE = "iOS Puzzle/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.iOS-Puzzle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -667,12 +669,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 100;
 				INFOPLIST_FILE = "iOS Puzzle/Info.plist";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.app.iOS-Puzzle";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -683,7 +687,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		649B3C8C256BA1A3000D7702 /* Build configuration list for PBXProject "iOS Puzzle" */ = {
+		649B3C8C256BA1A3000D7702 /* Build configuration list for PBXProject "AmazingPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				649B3CA3256BA1A5000D7702 /* Debug */,
@@ -692,7 +696,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		649B3CA5256BA1A5000D7702 /* Build configuration list for PBXNativeTarget "iOS Puzzle" */ = {
+		649B3CA5256BA1A5000D7702 /* Build configuration list for PBXNativeTarget "AmazingPuzzle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				649B3CA6256BA1A5000D7702 /* Debug */,
