@@ -21,9 +21,9 @@
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
 	<key>NSPhotoLibraryAddUsageDescription</key>
-	<string>相册权限</string>
+	<string>选择图片需要打开您的相册权限</string>
 	<key>NSPhotoLibraryUsageDescription</key>
-	<string>相册权限</string>
+	<string>选择图片需要打开您的相册权限</string>
 	<key>UIApplicationSupportsIndirectInputEvents</key>
 	<true/>
 	<key>UILaunchStoryboardName</key>
