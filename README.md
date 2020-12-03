@@ -36,7 +36,7 @@ let puzzleAndStyleView = PTPuzzleAndStyleView()
 // 设置位置和大小
 puzzleAndStyleView.frame = CGRect(x: 0, y: 0, width: 500, height: 300)
     
-// 添加到父试图
+// 添加到父视图
 view.addSubview(puzzleAndStyleView)
      
 // 设置图片数据源
