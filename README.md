@@ -10,6 +10,10 @@
 - 每组图片有6中风格类型
 - 纯Swift 语言开发, 简单集成使用
 
+## Demo Effect
+
+![image](https://github.com/iMazy/AmazingPuzzle/blob/main/amazing_puzzle_demo.gif)
+
 
 ## CocoaPods
 
@@ -41,10 +45,3 @@ puzzleAndStyleView.imageSource = [UIImage(named: "ImageName1"), UIImage(named: "
 // 获取拼图后的 UIImage
 let cropImage = puzzleAndStyleView.captureImage 
 ```
-
-
-## Demo Effect
-
-
-
-
