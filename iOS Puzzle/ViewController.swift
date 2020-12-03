@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Photos
 
 class ViewController: UIViewController {
     
@@ -47,8 +48,51 @@ class ViewController: UIViewController {
         self.imageSource.removeAll()
         self.puzzleAndStyleView.imageSource = self.imageSource
     }
+    
+    // 保存图片到本地相册
+    @IBAction func saveToAlbumAction(_ sender: Any) {
+        saveImage(puzzleAndStyleView.captureImageAction())
+    }
+    
+    // 保存图片到本地相册
+    func saveImage(_ image: UIImage?) {
+        
+        guard image != nil else { return }
+        
+        let saveImageClosure: (UIImage?) -> Void = { image in
+            PHPhotoLibrary.shared().performChanges({
+                if let image = image {
+                    PHAssetChangeRequest.creationRequestForAsset(from: image)
+                }
+            }, completionHandler: { isSuccess, error in
+                if isSuccess {
+                    print("保存成功")
+                }
+            })
+        }
+        
+        let authStatus = PHPhotoLibrary.authorizationStatus()
+        switch authStatus {
+        case .denied:
+            print("被拒绝")
+            // UIApplication.shared.openURL(URL(string: UIApplication.openSettingsURLString)!)
+        case .notDetermined:
+            PHPhotoLibrary.requestAuthorization({ (status) in
+                if status == .authorized {
+                    DispatchQueue.main.async {
+                        saveImageClosure(image)
+                    }
+                }
+            })
+        case .authorized:
+            saveImageClosure(image)
+        default:
+            saveImageClosure(image)
+        }
+    }
 }
 
+/// MARK: - UIImagePickerControllerDelegate & UINavigationControllerDelegate
 extension ViewController: UIImagePickerControllerDelegate & UINavigationControllerDelegate {
     
     func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {

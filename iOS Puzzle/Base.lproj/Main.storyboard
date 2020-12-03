@@ -12,61 +12,73 @@
         <!--Amazing Puzzle-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="iOS_Puzzle" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="AmazingPuzzle" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="428-5G-Owf">
-                                <rect key="frame" x="20" y="256" width="374" height="550"/>
+                                <rect key="frame" x="20" y="226.5" width="374" height="550"/>
                                 <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="550" id="uvt-AL-bJZ"/>
                                 </constraints>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tEi-6S-5IK">
-                                <rect key="frame" x="163" y="128" width="88" height="88"/>
-                                <state key="normal" image="icon_PhotoEffect"/>
+                                <rect key="frame" x="115" y="112" width="64" height="57"/>
+                                <state key="normal" image="image_add_icon"/>
                                 <connections>
                                     <action selector="selectPhotoAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="rVz-Kq-Tv8"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-P8-Idd">
-                                <rect key="frame" x="304" y="118" width="77" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="删除1张"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JOG-S5-3hM">
+                                <rect key="frame" x="237" y="114.5" width="60" height="52"/>
+                                <state key="normal" image="image_reduce_icon"/>
                                 <connections>
-                                    <action selector="deleteLastImageSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="lyD-mh-f0g"/>
+                                    <action selector="deleteLastImageSource:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hsa-RG-MRa"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wfh-D8-R82">
-                                <rect key="frame" x="64" y="117" width="49" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="清空"/>
-                                <connections>
-                                    <action selector="deleteAllImageSources:" destination="BYZ-38-t0r" eventType="touchUpInside" id="L93-8R-f7u"/>
-                                </connections>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bKC-P8-Idd">
+                                <rect key="frame" x="240.5" y="172.5" width="53" height="30"/>
+                                <state key="normal" title="删除1张">
+                                    <color key="titleColor" red="0.87999022010000005" green="0.34666499499999998" blue="0.27839702370000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                </state>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="点击添加图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j3-hl-AQe">
-                                <rect key="frame" x="155" y="99" width="104" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加图片" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6j3-hl-AQe">
+                                <rect key="frame" x="118" y="179" width="58" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.10417167099999999" green="0.58201479909999998" blue="0.85885691639999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGroupedBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6j3-hl-AQe" firstAttribute="centerX" secondItem="tEi-6S-5IK" secondAttribute="centerX" id="8qb-CX-B52"/>
+                            <constraint firstItem="bKC-P8-Idd" firstAttribute="centerX" secondItem="JOG-S5-3hM" secondAttribute="centerX" id="BmP-TN-2WS"/>
                             <constraint firstItem="428-5G-Owf" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="JLK-rN-ogr"/>
-                            <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="K4z-vp-aLI"/>
                             <constraint firstItem="428-5G-Owf" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="NU3-Te-vF5"/>
-                            <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6j3-hl-AQe" secondAttribute="bottom" constant="8" id="V4f-xj-Drd"/>
-                            <constraint firstItem="428-5G-Owf" firstAttribute="top" secondItem="tEi-6S-5IK" secondAttribute="bottom" constant="40" id="dAI-Cr-IZk"/>
-                            <constraint firstItem="6j3-hl-AQe" firstAttribute="centerX" secondItem="tEi-6S-5IK" secondAttribute="centerX" id="eEX-vT-aVn"/>
-                            <constraint firstItem="tEi-6S-5IK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="hjO-Zh-9ZQ"/>
+                            <constraint firstItem="tEi-6S-5IK" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="-60" id="R7m-pI-ePO"/>
+                            <constraint firstItem="428-5G-Owf" firstAttribute="top" secondItem="bKC-P8-Idd" secondAttribute="bottom" constant="24" id="VA2-SS-Jec"/>
+                            <constraint firstItem="JOG-S5-3hM" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" constant="60" id="bRb-OR-frv"/>
+                            <constraint firstItem="tEi-6S-5IK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="24" id="foW-g5-k0e"/>
+                            <constraint firstItem="bKC-P8-Idd" firstAttribute="centerY" secondItem="6j3-hl-AQe" secondAttribute="centerY" id="i9j-Ou-j0f"/>
+                            <constraint firstItem="JOG-S5-3hM" firstAttribute="centerY" secondItem="tEi-6S-5IK" secondAttribute="centerY" id="mDW-x5-Bxp"/>
+                            <constraint firstItem="6j3-hl-AQe" firstAttribute="top" secondItem="tEi-6S-5IK" secondAttribute="bottom" constant="10" id="u0N-Or-Vb6"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Amazing Puzzle" id="hcp-cr-fb8"/>
+                    <navigationItem key="navigationItem" title="Amazing Puzzle" id="hcp-cr-fb8">
+                        <barButtonItem key="leftBarButtonItem" style="plain" systemItem="redo" id="WuH-6c-eux">
+                            <connections>
+                                <action selector="deleteAllImageSources:" destination="BYZ-38-t0r" id="Y1S-hR-vYt"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="save" id="Cec-Gf-sWP">
+                            <connections>
+                                <action selector="saveToAlbumAction:" destination="BYZ-38-t0r" id="n48-gS-5Rd"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="428-5G-Owf" id="abC-AG-r9h"/>
                     </connections>
@@ -95,7 +107,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="icon_PhotoEffect" width="88" height="88"/>
+        <image name="image_add_icon" width="64" height="57"/>
+        <image name="image_reduce_icon" width="60" height="52"/>
         <systemColor name="systemGroupedBackgroundColor">
             <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

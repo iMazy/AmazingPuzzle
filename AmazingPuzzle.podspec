@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = 'AmazingPuzzle'
-  s.version      = '0.0.1'
+  s.version      = '0.0.2'
   s.summary      = 'AmazingPuzzle 主要用于将多张图片拼接成单张图片.'
   s.license      = 'MIT'
   s.homepage     = 'https://github.com/iMazy/AmazingPuzzle'

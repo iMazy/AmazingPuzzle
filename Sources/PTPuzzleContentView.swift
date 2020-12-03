@@ -54,11 +54,12 @@ class PTPuzzleContentView: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        backgroundColor = .white
     }
     
     required init?(coder: NSCoder) {
         super.init(coder: coder)
-        
+        backgroundColor = .white
     }
     
     func updatePuzzleWithStyleIndex(_ styleIndex: Int, images: [UIImage]) {
