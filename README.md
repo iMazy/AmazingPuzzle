@@ -1,4 +1,9 @@
-# AmazingPuzzle 主要用于将多张图片以各种形式拼接成单张图片
+# AmazingPuzzle 
+- 主要用于将多张图片以各种形式拼接成单张图片
+- 支持1~5张图片
+- 每张单独的照片支持移动缩放
+- 每组图片有6中风格类型
+- 纯Swift 语言开发, 简单集成使用
 
 <img src="https://github.com/iMazy/AmazingPuzzle/blob/main/iOS%20Puzzle/amazing_cat_puzzle.png" width=100%>
 
