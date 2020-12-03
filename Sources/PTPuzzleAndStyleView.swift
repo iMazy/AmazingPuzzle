@@ -22,7 +22,9 @@ public class PTPuzzleAndStyleView: UIView {
     /// 风格选择视图高度
     public var styleViewHight: CGFloat = 60
     /// 捕获图片
-    public var captureImageClosure: ((UIImage)->Void)?
+    public var captureImage: UIImage? {
+        return puzzleContentView.snapshot()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -51,10 +53,6 @@ public class PTPuzzleAndStyleView: UIView {
         puzzleStyleView.frame = CGRect(x: 20, y: self.frame.maxY - styleViewHight - 10, width: self.bounds.width - 40, height: styleViewHight)
         puzzleStyleView.delegate = self
         addSubview(puzzleStyleView)
-    }
-    
-    public func captureImageAction() -> UIImage? {
-        return puzzleContentView.snapshot()
     }
 }
 

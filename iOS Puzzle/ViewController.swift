@@ -51,7 +51,7 @@ class ViewController: UIViewController {
     
     // 保存图片到本地相册
     @IBAction func saveToAlbumAction(_ sender: Any) {
-        saveImage(puzzleAndStyleView.captureImageAction())
+        saveImage(puzzleAndStyleView.captureImage)
     }
     
     // 保存图片到本地相册
